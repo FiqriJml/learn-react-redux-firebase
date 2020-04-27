@@ -1,1 +1,1 @@
-# learn-react-redux-firebase
+Create a simple web app with react redux and firebase
