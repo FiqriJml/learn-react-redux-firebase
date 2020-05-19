@@ -21,12 +21,18 @@ const store = createStore(rootReducer,
     reduxFirestore(firebase, fbConfig)
     )
 );
+const config = {
+  userProfile: 'users', //where profile is stored on db
+  useFirestoreForProfile: true
+}
 
 const rrfProps = {
   firebase,
-  config: fbConfig,
+  config,
   dispatch: store.dispatch,
-  createFirestoreInstance
+  createFirestoreInstance,
+  presence: 'presence',
+  sessions: 'sessions'
 };
 
 function AuthIsLoaded({ children }) {
